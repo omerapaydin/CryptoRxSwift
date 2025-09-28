@@ -10,7 +10,7 @@ import Foundation
 
 public enum CryptoError : Error {
     case serverError
-    case parsingEror
+    case parsingError
 }
 
 class Webservice {
@@ -28,7 +28,7 @@ class Webservice {
                 if let cryptoList = crytpoList {
                     completion(.success(cryptoList))
                 } else {
-                    completion(.failure(.parsingEror))
+                    completion(.failure(.parsingError))
                 }
                 
             }

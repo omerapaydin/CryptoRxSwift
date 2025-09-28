@@ -9,6 +9,5 @@ import Foundation
 
 struct Crypto : Decodable{
     let currency: String
-    let price: Double
-    let image: String
+    let price: String
 }

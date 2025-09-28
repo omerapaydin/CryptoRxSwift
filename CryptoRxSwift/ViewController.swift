@@ -38,6 +38,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cryptoList.count
@@ -47,7 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! Cell
         cell.imageView1?.image = UIImage(named: "coin")
         cell.textLabel1?.text = cryptoList[indexPath.row].currency
-        cell.textLabel2.text = String(cryptoList[indexPath.row].price)
+        cell.textLabel2.text = cryptoList[indexPath.row].price
 
         return cell
     }
