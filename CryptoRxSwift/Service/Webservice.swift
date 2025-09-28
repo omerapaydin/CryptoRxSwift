@@ -8,36 +8,33 @@
 import Foundation
 
 
-enum WebserviceError: Error {
+public enum CryptoError : Error {
     case serverError
-    case parsingError
-    
+    case parsingEror
 }
-
 
 class Webservice {
     
-    
-    func fetchData(url: URL,completion: @escaping (Result<[Crypto],Error>)->() ){
+    func downloadCurrencies(url: URL, completion: @escaping (Result<[Crypto],CryptoError>) -> ()) {
         
-        
-        URLSession.shared.dataTask(with: url) { (data,response,error) in
-            if let _ =  error {
-                completion(.failure(WebserviceError.serverError))
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if let _ = error {
+                completion(.failure(.serverError))
             } else if let data = data {
-                do {
-                    let cryptoData = try JSONDecoder().decode([Crypto].self, from: data)
-                    completion(.success(cryptoData))
-                } catch {
-                    completion(.failure(WebserviceError.parsingError))
+                
+                let crytpoList = try? JSONDecoder().decode([Crypto].self, from: data)
+                
+                if let cryptoList = crytpoList {
+                    completion(.success(cryptoList))
+                } else {
+                    completion(.failure(.parsingEror))
                 }
+                
             }
-        }
-        
-        
+            
+        }.resume()
         
     }
-    
-    
     
 }
