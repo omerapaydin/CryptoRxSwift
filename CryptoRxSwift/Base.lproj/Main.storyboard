@@ -65,9 +65,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageView1" destination="7eB-eG-SJs" id="OcK-lv-6e6"/>
-                                            <outlet property="textLabel1" destination="wdh-9H-dg1" id="OYY-nw-apE"/>
-                                            <outlet property="textLabel2" destination="DpQ-4D-MD5" id="2wO-IG-o1e"/>
+                                            <outlet property="imageView1" destination="7eB-eG-SJs" id="Hys-Dp-rvu"/>
+                                            <outlet property="textLabel1" destination="wdh-9H-dg1" id="Xrt-3d-6va"/>
+                                            <outlet property="textLabel2" destination="DpQ-4D-MD5" id="5LB-YL-JpX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
