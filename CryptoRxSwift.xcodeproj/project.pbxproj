@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FFF001D42E8F2C90009C32AA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FFF001D32E8F2C90009C32AA /* RxCocoa */; };
+		FFF001D62E8F2C90009C32AA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFF001D52E8F2C90009C32AA /* RxSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FF93F5E72E89B509002D4E80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF001D62E8F2C90009C32AA /* RxSwift in Frameworks */,
+				FFF001D42E8F2C90009C32AA /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +132,8 @@
 			);
 			name = CryptoRxSwift;
 			packageProductDependencies = (
+				FFF001D32E8F2C90009C32AA /* RxCocoa */,
+				FFF001D52E8F2C90009C32AA /* RxSwift */,
 			);
 			productName = CryptoRxSwift;
 			productReference = FF93F5D02E89B508002D4E80 /* CryptoRxSwift.app */;
@@ -585,6 +594,19 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FFF001D32E8F2C90009C32AA /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFF001D22E8F2B0D009C32AA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FFF001D52E8F2C90009C32AA /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFF001D22E8F2B0D009C32AA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FF93F5C82E89B508002D4E80 /* Project object */;
 }
