@@ -27,7 +27,6 @@ class CryptoViewModel {
             switch cryptoResult {
             case .success(let cryptos):
                 self.cryptos.onNext(cryptos)
-              
             case .failure(let error):
                 switch error {
                 case .parsingError:
